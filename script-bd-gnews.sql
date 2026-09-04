@@ -14,3 +14,5 @@ CREATE TABLE noticia(
 INSERT INTO noticia (titulo, entrevista, artigo, data_publicacao) VALUES ('Terremoto em Cascavel', 'entrevista com Maria Jubiscreuda', 'Terremoto atinge o centro de Cascavel causando 3 mortes', '12/12/2012');
 
 SELECT * FROM noticia;
+
+SELECT * FROM noticia;
