@@ -28,3 +28,14 @@ CREATE TABLE curtida_noticia(
   CONSTRAINT fk_jornalista FOREIGN KEY (fk_jornalista) REFERENCES jornalista (id_jornalista)
 
 );
+
+CREATE TABLE jornalista(
+
+  id_jornalista SERIAL PRIMARY KEY,
+  id_usuario int,
+  registro_profissional varchar(50),
+  biografia character varying(255),
+  especialidade varchar(100),
+  CONSTRAINT fk_usuario FOREIGN KEY (id_usuario) REFERENCES usuario (id_usuario)
+
+);
