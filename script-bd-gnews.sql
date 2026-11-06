@@ -70,3 +70,21 @@ CREATE TABLE midia_noticia (
 SELECT * FROM midia_noticia;
 
 INSERT INTO  midia_noticia(tipo_midia, url_arquivo, legenda, data_upload) VALUES ('Página web', 'www.gnews.com', 'Parque sustentável', '2027-01-01 03:00:34' );
+
+CREATE TABLE usuario(
+
+  id_usuario SERIAL PRIMARY KEY,
+  fk_jornalista int,
+  nome varchar(255),
+  email varchar(255),
+  senha_hash varchar(255),
+  data_nascimento date,
+  tipo_perfil varchar(255),
+  data_cadastro timestamp
+
+);
+
+INSERT INTO  usuario(nome, email, senha, data_nascimento, tipo_perfil, data_cadastro) VALUES ('Rogerio', 'Rogerio@gmail.com', '6735289', '1960-01-17', '2021-03-12 01:00:56' );
+
+SELECT * FROM usuario;
+
