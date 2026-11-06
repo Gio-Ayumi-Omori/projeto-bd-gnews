@@ -17,3 +17,14 @@ CREATE TABLE noticia(
 INSERT INTO noticia (titulo, subtitulo, conteudo_texto, status) VALUES ('');
 
 SELECT * FROM noticia;
+
+CREATE TABLE curtida_noticia(
+
+  id_curtida SERIAL PRIMARY KEY,
+  id_noticia int,
+  id_usuario int,
+  fk_jornalista int,
+  data_reacao timestamp,
+  CONSTRAINT fk_jornalista FOREIGN KEY (fk_jornalista) REFERENCES jornalista (id_jornalista)
+
+);
